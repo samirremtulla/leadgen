@@ -14,6 +14,7 @@ class QuestionsController < ApplicationController
  
   def create
     @question = Question.new (params[:question])
+    @question.response = 0 #patch fix later
 
     if @question.save
       redirect_to questions_path

@@ -6,8 +6,11 @@ class PaymentsController < ApplicationController
   def create
     @payment = current_user.payments.build(:question_id => params[:question_id])
     @payment.payment = true
+    
+    @question = @payment.question
+    @question.response += 1
 
-    if @payment.save
+    if (@payment.save && @question.save)
       redirect_to questions_path
     else
       redirect_to questions_path
