@@ -1,2 +1,13 @@
-<h1>Questions#index</h1>
-<p>Find me in app/views/questions/index.html.erb</p>
+<h1>All Questions</h1>
+
+<table class="table-striped">
+  <thead>
+    <th>Question</th>
+  </thead>
+    <tr>
+      <% @questions.each do |question|%>
+      <td><%= question.description %> </td>
+      <td><%= link_to "More Details!", question_path(question)%>
+    </tr>
+    <%end%>
+</table>

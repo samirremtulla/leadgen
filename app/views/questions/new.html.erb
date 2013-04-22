@@ -1,9 +1,9 @@
-<h1>Ask a question </h1>
+<h1>Ask a Question! </h1>
 
 <%= form_for @question do |f| %>
-<p>
-  <%= f.label :description %>
-  <%= f.text_area :description %>
+<p class = "span4">
+  <%= f.label "Ask a Question!" %>
+  <%= f.text_area :description, :rows => "8" %>
 </p>
 <p>
   <%= f.label :name %>
@@ -15,10 +15,11 @@
 </p>
 <p>
   <%= f.label :email %>
-  <%= f.text_field :email %>
+  <%= f.email_field :email %>
 </p>
+
   <div class="form-actions">
-    <%= f.submit 'Submit Question', :class => 'btn' %>
+    <%= f.submit 'Submit Question', :class => 'btn btn-large btn-primary' %>
   </div>
 
 <% end %>
