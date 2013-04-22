@@ -1,5 +1,7 @@
 Leadgen::Application.routes.draw do
 
+
+
   root :to => 'questions#index'
   get "logout" => "sessions#destroy", :as => "logout"
   get "login" => "sessions#new", :as => "login"
@@ -8,7 +10,10 @@ Leadgen::Application.routes.draw do
   resources :sessions
   get "secret" => "home#secret", :as => "secret"
 
-  resources :questions
+  resources :questions do
+    post "payments/create"
+  end
+
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

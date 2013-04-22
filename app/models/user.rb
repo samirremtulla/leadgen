@@ -1,6 +1,9 @@
 class User < ActiveRecord::Base
   # attr_accessible :title, :body
     authenticates_with_sorcery!
+  has_many :payments
+  has_many :questions, :through => :payments
+
 
   attr_accessible :email, :password, :password_confirmation
 

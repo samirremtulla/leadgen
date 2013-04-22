@@ -1,2 +1,13 @@
-<h1>Questions#show</h1>
-<p>Find me in app/views/questions/show.html.erb</p>
+<h3>Question</h3>
+<%= @question.description %>
+
+<h3>name</h3>
+<%= @question.name %>
+
+<h3>phone</h3>
+<%= @question.phone %>
+
+<h3>email</h3>
+<%= @question.email %>
+
+<button><%= link_to "Purchase", question_payments_create_path(@question), :method => :post %></button>
