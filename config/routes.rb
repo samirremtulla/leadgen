@@ -1,5 +1,12 @@
 Leadgen::Application.routes.draw do
 
+  root :to => 'questions#index'
+  get "logout" => "sessions#destroy", :as => "logout"
+  get "login" => "sessions#new", :as => "login"
+  get "signup" => "users#new", :as => "signup"
+  resources :users
+  resources :sessions
+  get "secret" => "home#secret", :as => "secret"
 
   resources :questions
 
@@ -52,7 +59,7 @@ Leadgen::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  # root :to => 'welcome#index'
+
 
   # See how all your routes lay out with "rake routes"
 
