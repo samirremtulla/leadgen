@@ -1,0 +1,15 @@
+<%= @user.email%>
+
+<% @user.questions.each do |q| %>
+
+<p><h2>Description</h2>
+  <%= q.description%></p>
+<p><h2>name</h2>
+  <%= q.name%></p>
+<p><h2>phone</h2>
+  <%= q.phone%></p>
+<p><h2>email</h2>
+  <%= q.email%></p>
+
+
+<%end%>
