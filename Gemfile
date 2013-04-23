@@ -15,6 +15,7 @@ gem 'pusher_rails'
 gem 'kaminari'
 gem 'kaminari-bootstrap'
 gem "geocoder"
+gem 'acts-as-taggable-on'
 
 group :development do
   gem "better_errors"

@@ -17,6 +17,10 @@
   <%= f.label :email %>
   <%= f.email_field :email %>
 </p>
+<p>
+  <%= f.label :tag_list, "Tags (separated by commas)" %>
+  <%= f.text_field :tag_list %>
+</p>
     <%= f.submit 'Submit Question', :class => 'btn btn-large btn-primary' %>
 <% end %>
 

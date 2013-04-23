@@ -9,6 +9,7 @@ Leadgen::Application.routes.draw do
   get "signup" => "users#new", :as => "signup"
   resources :sessions
   get "secret" => "home#secret", :as => "secret"
+  get 'tags/:tag', to: 'questions#index', as: :tag
 
   resources :questions do
     post "payments/create"

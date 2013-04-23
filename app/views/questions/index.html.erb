@@ -12,6 +12,7 @@
       <% @questions.each do |question|%>
       <td><%= question.description %> </td>
       <td><%= link_to "Purchase Lead!", question_path(question)%>
+        <td>Tags: <%= raw question.tag_list.map { |t| link_to t, tag_path(t)}.join(',')%></td>
     </tr>
     
     <%end%>
