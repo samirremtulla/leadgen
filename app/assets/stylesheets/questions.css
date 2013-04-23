@@ -5,3 +5,62 @@
   .m { font-size: 1.2em; }
   .l { font-size: 1.8em; }
 }
+
+/*http://graphicfusiondesign.com/blog/design/creating-fancy-css3-fade-in-animations-on-page-load/*/
+
+
+.slider_bg{
+  background-color: black;
+  line-height: 60px;
+  width: 45%;
+  position: absolute;
+  margin-top: 100px;
+  margin-left: -1000px;
+  color: white;
+  text-align: right;
+  padding-right: 20px;
+  opacity: .8;
+  margin-left: -30px;
+
+}
+
+@-webkit-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@-moz-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+ 
+.fade-in {
+    opacity:0;  /* make things invisible upon start */
+    -webkit-animation:fadeIn ease-in 1;  /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
+    -moz-animation:fadeIn ease-in 1;
+    animation:fadeIn ease-in 1;
+ 
+    -webkit-animation-fill-mode:forwards;  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
+    -moz-animation-fill-mode:forwards;
+    animation-fill-mode:forwards;
+ 
+    -webkit-animation-duration:1s;
+    -moz-animation-duration:1s;
+    animation-duration:1s;
+}
+ 
+.fade-in.one {
+-webkit-animation-delay: 1s;
+-moz-animation-delay: 1s;
+animation-delay: 1s;
+}
+ 
+.fade-in.two {
+-webkit-animation-delay: 4s;
+-moz-animation-delay:4s;
+animation-delay: 4s;
+}
+ 
+.fade-in.three {
+-webkit-animation-delay: 6s;
+-moz-animation-delay:6s;
+animation-delay: 6s;
+}
+
+.modal{
+  display:hidden;
+}

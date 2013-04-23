@@ -1,26 +1,33 @@
-<h1>Ask a Question! </h1>
+<div class="slider_bg fade-in one">Have Tough Financial Questions? </div>
+<div class="slider_bg fade-in two"> Get Expert Advice </div>
+<button class="slider_bg fade-in three" type="button" data-toggle="modal" data-target="#myModal"> Click Here to Ask a Question</button>
 
-<%= form_for @question do |f| %>
-<p class = "span4">
-  <%= f.label "Ask a Question!" %>
-  <%= f.text_area :description, :rows => "8" %>
-</p>
-<p>
-  <%= f.label :name %>
-  <%= f.text_field :name %>
-</p>
-<p>
-  <%= f.label :phone %>
-  <%= f.text_field :phone %>
-</p>
-<p>
-  <%= f.label :email %>
-  <%= f.email_field :email %>
-</p>
-<p>
-  <%= f.label :tag_list, "Tags (separated by commas)" %>
-  <%= f.text_field :tag_list %>
-</p>
-    <%= f.submit 'Submit Question', :class => 'btn btn-large btn-primary' %>
-<% end %>
+<div id="myModal" class="modal hide" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+
+  <h1>Ask a Question! </h1>
+
+  <%= form_for @question do |f| %>
+  <p class = "span4">
+    <%= f.label "Ask a Question!" %>
+    <%= f.text_area :description, :rows => "8" %>
+  </p>
+  <p>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label :phone %>
+    <%= f.text_field :phone %>
+  </p>
+  <p>
+    <%= f.label :email %>
+    <%= f.email_field :email %>
+  </p>
+  <p>
+    <%= f.label :tag_list, "Tags (separated by commas)" %>
+    <%= f.text_field :tag_list %>
+  </p>
+      <%= f.submit 'Submit Question', :class => 'btn btn-large btn-primary' %>
+  <% end %>
+</div>
 
