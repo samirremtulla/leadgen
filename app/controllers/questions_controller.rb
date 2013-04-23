@@ -16,6 +16,8 @@ class QuestionsController < ApplicationController
   def create
     @question = Question.new (params[:question])
     @question.response = 0 #patch fix later
+    data = @question.description
+    Pusher['site-activity'].trigger('action', data)
 
     if @question.save
       redirect_to questions_path
