@@ -17,6 +17,7 @@ class QuestionsController < ApplicationController
   def create
     @question = Question.new (params[:question])
     @question.response = 0 #patch fix later
+    @question.city = request.location.city
     data = @question.description
     Pusher['site-activity'].trigger('action', data)
 

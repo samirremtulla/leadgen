@@ -14,6 +14,7 @@ gem "twitter-bootstrap-rails"
 gem 'pusher_rails'
 gem 'kaminari'
 gem 'kaminari-bootstrap'
+gem "geocoder"
 
 group :development do
   gem "better_errors"
