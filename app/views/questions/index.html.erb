@@ -4,10 +4,14 @@
     <th>Question</th>
   </thead>
     <tr>
+      <td class = "description"></td>
+      <td class = "link"></td>
+      
       <% @questions.each do |question|%>
       <td><%= question.description %> </td>
       <td><%= link_to "Purchase Lead!", question_path(question)%>
     </tr>
+    
     <%end%>
 </table>
 

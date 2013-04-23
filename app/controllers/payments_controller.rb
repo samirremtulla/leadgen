@@ -9,8 +9,10 @@ class PaymentsController < ApplicationController
     
     @question = @payment.question
     @question.response += 1
+    @user = current_user
+    @user.balance -=1
 
-    if (@payment.save && @question.save)
+    if (@payment.save && @question.save && @user.save)
       redirect_to questions_path
     else
       redirect_to questions_path

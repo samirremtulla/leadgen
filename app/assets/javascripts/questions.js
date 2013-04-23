@@ -6,5 +6,5 @@ var pusher = new Pusher('ea68d0e9ff775535a631');
 
 var channel = pusher.subscribe('site-activity');
 channel.bind('action', function(data) {
-  $('td').append("<td>" + data + "</td>");
+  $('td').prepend("<td>" + data + "</td>");
 });
