@@ -1,15 +1,14 @@
-<%= @user.email%>
+<%= paginate(@user_questions)%>
+<% @user_questions.each do |q| %>
 
-<% @user.questions.each do |q| %>
-
-<p><h2>Description</h2>
+<p>Description:
   <%= q.description%></p>
-<p><h2>name</h2>
+<p>name:
   <%= q.name%></p>
-<p><h2>phone</h2>
+<p>phone:
   <%= q.phone%></p>
-<p><h2>email</h2>
+<p>email
   <%= q.email%></p>
-
-
 <%end%>
+
+<!-- http://stackoverflow.com/questions/10305900/rails-3-pagination-with-kaminari-show-action-of-one-controller-to-browse-re -->

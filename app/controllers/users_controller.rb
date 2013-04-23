@@ -31,6 +31,6 @@ class UsersController < ApplicationController
   end
 
   def show
-    @user = User.find(params[:id])
+    @user_questions = User.find(params[:id]).questions.order('questions.created_at DESC').page(params[:page]).per(2) 
   end
 end

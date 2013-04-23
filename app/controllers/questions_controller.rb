@@ -2,7 +2,8 @@ class QuestionsController < ApplicationController
   
   skip_before_filter :require_login, :only => [:new, :create]
   def index
-    @questions = Question.all
+    @questions = Question.order('questions.created_at DESC').page(params[:page]).per(10)
+
   end
 
   def show
