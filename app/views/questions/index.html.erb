@@ -1,28 +1,38 @@
-<h1>Potential Leads</h1>
-<%= paginate @questions %>
-
-<div id="tag_cloud">
-  <% tag_cloud Question.tag_counts, %w{s m l} do |tag, css_class| %>
-  <%= link_to tag.name, tag_path(tag.name), class: css_class %>
-  <%end%>
-</div>
-<!-- http://railscasts.com/episodes/382-tagging?view=asciicast -->
-
-<table>
-  <thead>
-    <th>Question</th>
-  </thead>
-    <tr>
-      <td class = "description"></td>
-      <td class = "link"></td>
-      
-      <% @questions.each do |question|%>
-      <td><%= question.description %> </td>
-      <td><%= link_to "Purchase Lead!", question_path(question)%>
-        <td>Tags: <%= raw question.tag_list.map { |t| link_to t, tag_path(t)}.join(',')%></td>
-    </tr>
+<%= render "/layouts/nav"%>
+<div class = "container">
+  <h1>Potential Leads</h1>
+<!--   <div id="tag_cloud">
+    <% tag_cloud Question.tag_counts, %w{s m l} do |tag, css_class| %>
+    <%= link_to tag.name, tag_path(tag.name), class: css_class %>
     <%end%>
-</table>
+  </div> -->
+  <!-- http://railscasts.com/episodes/382-tagging?view=asciicast -->
 
-
-
+  <table>
+       <!--  <td class = "description"></td>
+        <td class = "link"></td> -->
+        
+        <% @questions.each do |question|%>
+        <tr class="list_tr">
+          <td class="list_bg">
+          <p>Question: <%= question.description %></p>
+          <p>Tags: <%= raw question.tag_list.map { |t| link_to t, tag_path(t)}.join(', ')%></p>
+          <p>Phone: 
+            <% if question.phone? %>
+              Available
+            <%else%>
+              Unavailable
+            <%end%>
+          </p>
+          <p>Email: <% if question.email? %>
+              Available
+            <%else%>
+              Unavailable
+            <%end%>
+          </p></td>
+          <td class="list_bg2"><button class="btn btn-success"><%= link_to "Purchase Lead!", question_path(question)%></button></td>
+        </tr>
+      <%end%>
+  </table>
+    <%= paginate @questions %>
+</div>

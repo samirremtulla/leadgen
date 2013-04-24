@@ -1,13 +1,40 @@
-<h3>Question</h3>
-<%= @question.description %>
+<% check = false%>
+  
+  <%@question.users.each do |user|%>
+    <% if user.id == current_user.id%>
+      <% check = true%>
+    <%end%>
+  <%end%>
 
-<h3>name</h3>
-<%= @question.name %>
 
-<h3>phone</h3>
-<%= @question.phone %>
+<%= render "/layouts/nav"%>
+<div class="purchase_group">
+  <h3>Purchase Question</h3>
+  <p><strong>Question: </strong> <%= @question.description %> </p>
+      <% if check == true%>
+        <p><strong>Name: </strong> <%= @question.name %> </p>
+        <p><strong>Phone: </strong> <%= @question.phone %> </p>
+        <p><strong>Email: </strong> <%= @question.email %> </p>
+      <%else%>
+        <p><strong>Name: </strong> <%=@question.name %> </p>
+        <p><strong>Phone: </strong> 
+          <% if @question.phone? %> 
+            Available
+          <%else%>
+            Unavailable
+          <%end%>
+        </p>
+        <p><strong>Email: </strong> 
+          <% if @question.email? %>
+            Available
+          <%else%>
+            Unavailable 
+          <%end%>
+        </p>
+        <button class="btn btn-primary"><%= link_to "Purchase", question_payments_create_path(@question), :method => :post %></button>
+      <%end%>
+<br/>
 
-<h3>email</h3>
-<%= @question.email %>
 
-<button><%= link_to "Purchase", question_payments_create_path(@question), :method => :post %></button>
+
+</div>

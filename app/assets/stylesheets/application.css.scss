@@ -27,8 +27,27 @@ body{
   background-color:white;
 }*/
 
+.navbar{
+  color:yellow;
+  font-size: 1em;
+}
 
+.navbar-inner{
+  padding-left: 20px;
+}
 
+.navbar-inverse .navbar-inner {
+  background:black;
+  border-radius: 0px;
+}
+
+.brand a{
+  margin-left:10px;
+}
+
+.navbar-text{
+  line-height:51px;
+}
 
 
 

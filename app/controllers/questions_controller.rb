@@ -4,9 +4,9 @@ class QuestionsController < ApplicationController
 
   def index
     if params[:tag]
-      @questions = Question.tagged_with(params[:tag]).page(params[:page]).per(10)
+      @questions = Question.tagged_with(params[:tag]).page(params[:page]).per(3)
     else
-      @questions = Question.order('questions.created_at DESC').page(params[:page]).per(10)
+      @questions = Question.order('questions.created_at DESC').page(params[:page]).per(3)
     end
   end
 

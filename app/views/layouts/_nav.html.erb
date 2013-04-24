@@ -1,23 +1,16 @@
 <div class="navbar navbar-inverse">
   <div class="navbar-inner">
-    <a class="brand" href= "/">LeadGen</a>
     <ul class="nav">
-
-      <% if current_user %>
-       <li> Logged in as <%= current_user.email %></li>
-      
-
-      <li class="active"><%= link_to "Add Money to Account", edit_user_path(current_user)%></li>
+      <li class="brand">LeadGen</li>
       <li><%= link_to "Potential Leads", questions_path%></li>
       <li><%= link_to "My Leads", user_path(current_user)%> </li>
+
+    </ul>
+    <ul class="nav pull-right">
+      <li><a>Account Balance: $<%= current_user.balance%></a></li>
+      <li class="active"><%= link_to "Add Money to Account", edit_user_path(current_user)%></li>
+      <li><a> Logged in as <%= current_user.email %></a></li>
       <li>  <%= link_to "Log out", logout_path %></li>
-              <li>Account Balance: $<%= current_user.balance%></li>
-
-
-      <% else %>
-        <li><%= link_to "Sign up", signup_path %></li>
-        <li><%=link_to "Log in", login_path  %></li>
-      <% end %>
     </ul>
   </div>
 </div>

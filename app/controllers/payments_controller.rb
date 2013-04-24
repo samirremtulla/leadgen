@@ -13,7 +13,7 @@ class PaymentsController < ApplicationController
     @user.balance -=1
 
     if (@payment.save && @question.save && @user.save)
-      redirect_to questions_path
+      render "questions/show"
     else
       redirect_to questions_path
     end
