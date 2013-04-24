@@ -21,6 +21,7 @@
   padding-right: 20px;
   opacity: .8;
   margin-left: -30px;
+  text-decoration: none;
 
 }
 
@@ -43,14 +44,14 @@
     animation-duration:1s;
 }
  
-.fade-in.one {
+/*.fade-in.one {
 -webkit-animation-delay: 1s;
 -moz-animation-delay: 1s;
 animation-delay: 1s;
 }
  
 .fade-in.two {
--webkit-animation-delay: 4s;
+-webkit-animation-delay: 4s; 
 -moz-animation-delay:4s;
 animation-delay: 4s;
 }
@@ -59,8 +60,25 @@ animation-delay: 4s;
 -webkit-animation-delay: 6s;
 -moz-animation-delay:6s;
 animation-delay: 6s;
-}
+}*/
 
 .modal{
   display:hidden;
+  width: 510px;
+}
+
+.modal-body{
+  padding-left:20px;
+}
+
+.modal_field{
+  margin-left:30px;
+}
+
+.modal_field_2{
+  margin-left:26px;
+}
+
+.modal_field_3{
+  margin-left:32px;
 }

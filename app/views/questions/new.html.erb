@@ -4,29 +4,38 @@
 <a href="#askQuestion" role="button" class="slider_bg fade-in three" data-toggle="modal" >Click Here to Ask a Question</a>
 
 <div id="askQuestion" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="askQuestion" aria-hidden="true">
-  <h1>Ask a Question! </h1>
 
-  <%= form_for @question do |f| %>
-  <p class = "span4">
-    <%= f.label "Ask a Question!" %>
-    <%= f.text_area :description, :rows => "8" %>
-  </p>
-  <p>
-    <%= f.label :name %>
-    <%= f.text_field :name %>
-  </p>
-  <p>
-    <%= f.label :phone %>
-    <%= f.text_field :phone %>
-  </p>
-  <p>
-    <%= f.label :email %>
-    <%= f.email_field :email %>
-  </p>
-  <p>
-    <%= f.label :tag_list, "Tags (separated by commas)" %>
-    <%= f.text_field :tag_list %>
-  </p>
-      <%= f.submit 'Submit Question', :class => 'btn btn-large btn-primary' %>
-  <% end %>
+  <div class="questions_modal">
+    <div class="modal-header">
+      <h4>Ask a Question! </h4>
+    </div>
+
+    <div class="modal-body">
+      <%= form_for @question do |f| %>
+          <%= f.label "Your Question" %>
+          <%= f.text_area :description, :rows => "2", :class=>"span6" %>
+
+          <%= f.label :tag_list, "Tags (separated by commas)" %>
+          <%= f.text_field :tag_list, :class=>"span6" %>
+
+        <div class="form-inline">
+          <%= f.label :name %>
+          <%= f.text_field :name, :class=>"modal_field" %>
+        </div><br/>
+
+        <div class="form-inline">
+          <%= f.label :phone %>
+          <%= f.text_field :phone, :class=>"modal_field_2" %>
+        </div><br/>
+
+        <div class="form-inline">
+          <%= f.label :email %>
+          <%= f.email_field :email, :class=>"modal_field_3" %>
+        </div>
+    </div>
+        <div class="modal-footer">
+          <%= f.submit 'Submit Question', :class => 'btn btn-large btn-primary modal_button' %>
+        </div>
+      <% end %>
+  </div>
 </div>
