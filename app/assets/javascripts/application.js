@@ -14,4 +14,6 @@
 //= require jquery_ujs
 //= require pusher
 //= require bootstrap
+//= require bootstrap-modal
+//= require bootstrap-transition
 //= require_tree .

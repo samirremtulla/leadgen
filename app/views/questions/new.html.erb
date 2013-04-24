@@ -1,9 +1,9 @@
 <div class="slider_bg fade-in one">Have Tough Financial Questions? </div>
 <div class="slider_bg fade-in two"> Get Expert Advice </div>
-<button class="slider_bg fade-in three" type="button" data-toggle="modal" data-target="#myModal"> Click Here to Ask a Question</button>
 
-<div id="myModal" class="modal hide" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+<a href="#askQuestion" role="button" class="slider_bg fade-in three" data-toggle="modal" >Click Here to Ask a Question</a>
 
+<div id="askQuestion" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="askQuestion" aria-hidden="true">
   <h1>Ask a Question! </h1>
 
   <%= form_for @question do |f| %>
@@ -30,4 +30,3 @@
       <%= f.submit 'Submit Question', :class => 'btn btn-large btn-primary' %>
   <% end %>
 </div>
-

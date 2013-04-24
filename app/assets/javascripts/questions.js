@@ -9,6 +9,3 @@ channel.bind('action', function(data) {
   $('td').prepend("<td>" + data + "</td>");
 });
 
-$(document).ready(function(){
-  $('.three').click(console.log("hello"))
-});
