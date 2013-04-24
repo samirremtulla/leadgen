@@ -9,6 +9,21 @@
 /*http://graphicfusiondesign.com/blog/design/creating-fancy-css3-fade-in-animations-on-page-load/*/
 
 
+.user_registration{
+  color:black;
+  text-decoration: none;
+  background-color:black;
+  text-decoration: none;
+  color:white;
+  width:150px;
+}
+
+a{
+  color:white;
+  text-decoration: none;
+}
+
+
 .slider_bg{
   background-color: black;
   line-height: 60px;
@@ -44,7 +59,7 @@
     animation-duration:1s;
 }
  
-/*.fade-in.one {
+.fade-in.one {
 -webkit-animation-delay: 1s;
 -moz-animation-delay: 1s;
 animation-delay: 1s;
@@ -60,7 +75,7 @@ animation-delay: 4s;
 -webkit-animation-delay: 6s;
 -moz-animation-delay:6s;
 animation-delay: 6s;
-}*/
+}
 
 .modal{
   display:hidden;
