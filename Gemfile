@@ -14,6 +14,8 @@ gem 'kaminari'
 gem 'kaminari-bootstrap'
 gem "geocoder"
 gem 'acts-as-taggable-on'
+gem 'sass-rails',   '~> 3.2.3'
+
 
 group :development do
   gem "better_errors"
@@ -21,7 +23,6 @@ end
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
-  gem 'sass-rails',   '~> 3.2.3'
   gem 'coffee-rails', '~> 3.2.1'
   gem 'bootstrap-sass'
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
