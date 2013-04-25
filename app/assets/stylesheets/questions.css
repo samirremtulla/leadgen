@@ -51,19 +51,7 @@
   float:right;
 }
 
-#tag_cloud {
-  border: 1px solid blue;
-  height: 10%;
-  width: 40%;
-  float: right;
-  .s { font-size: 0.8em; }
-  .m { font-size: 1.2em; }
-  .l { font-size: 1.8em; }
-}
-
-.tagsinput a{
-  color:black;
-}
+/*Pagination Bar*/
 
 .pagination{
   clear:both;
@@ -73,7 +61,6 @@
   background:white;
   opacity:.9;
   box-shadow: 0 0 2px 2px #888;
-
 }
 
 .pagination ul > li.active > a{
@@ -88,6 +75,32 @@
   background: #7F8C8D;
   border-color: #2C3E50;
 }
+/*Tag Cloud*/
+
+.tagsinput{
+  background: white;
+  opacity:.9;
+  box-shadow: 0 0 2px 2px #888;
+  border: 2px solid #7F8C8D;
+}
+
+#tag_cloud {
+  height: 10%;
+  width: 40%;
+  float: right;
+  .s { font-size: 0.8em; }
+  .m { font-size: 1.2em; }
+  .l { font-size: 1.8em; }
+}
+
+.tagsinput a{
+  color:black;
+}
+
+.tagsinput .tag{
+  background: #95A5A6;
+}
+
 /*http://graphicfusiondesign.com/blog/design/creating-fancy-css3-fade-in-animations-on-page-load/*/
 
 

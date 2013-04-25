@@ -1,18 +1,43 @@
-<h1>My Leads</h1>
-<%= paginate(@user_questions)%>
-<% @user_questions.each do |q| %>
 
-<p>Description:
-  <%= q.description%></p>
-<p>name:
-  <%= q.name%></p>
-<p>phone:
-  <%= q.phone%></p>
-<p>email:
-  <%= q.email%></p>
-  <p>city:
-    <%= q.city%></p>
-  </p>
-<%end%>
+
+<%= render "/layouts/nav"%>
+<div class = "container">
+  <h1>My Leads</h1>
+  <div class = "list_wrap">
+    <% @user_questions.each do |q| %>
+      <div class="list_bg">
+        <p>Description:
+          <%= q.description%></p>
+        <p>name:
+          <%= q.name%></p>
+        <p>phone:
+          <%= q.phone%></p>
+        <p>email:
+          <%= q.email%></p>
+          <p>city:
+            <%= q.city%></p>
+          </p>
+      </div>
+    <%end%>
+  </div>
+  <div id="phone_section">
+    TEXT A NUMBER
+    
+    <%= form_tag :method => :put do %>
+      <%= label_tag "Phone Number (ex. +14155555555)"%>
+      <%= text_field_tag :number %>
+      <%= label_tag "Send Message"%>
+      <%= text_area_tag :number %>
+      <br/>
+      <%= submit_tag "Send", :class => "btn btn-success"%>
+    <%end%>
+
+
+
+  </div>
+  <%= paginate(@user_questions)%>
+  
+  
+</div>
 
 <!-- http://stackoverflow.com/questions/10305900/rails-3-pagination-with-kaminari-show-action-of-one-controller-to-browse-re -->

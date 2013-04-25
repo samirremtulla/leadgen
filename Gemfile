@@ -15,7 +15,8 @@ gem 'kaminari-bootstrap'
 gem "geocoder"
 gem 'acts-as-taggable-on'
 gem 'sass-rails',   '~> 3.2.3'
-
+gem 'twilio-ruby'
+gem "figaro"
 
 group :development do
   gem "better_errors"

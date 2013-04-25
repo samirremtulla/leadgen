@@ -35,6 +35,7 @@
     <% tag_cloud Question.tag_counts, %w{s m l} do |tag, css_class| %>
       <span class="tag"><%= link_to tag.name, tag_path(tag.name), class: css_class %></span>
     <%end%>
+      <span class="tag"><%= link_to "All Leads", questions_path%></span>
   </div>
 </div>
 
