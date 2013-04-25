@@ -45,10 +45,13 @@ body{
   margin-left:10px;
 }
 
-.navbar-text{
-  line-height:51px;
+.navbar .brand{
+  color:white
 }
 
+.navbar-inverse .nav > li > a.non-link{
+  color:#95A5A6
+}
 
 
 

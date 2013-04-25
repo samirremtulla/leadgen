@@ -2,14 +2,15 @@
   <div class="navbar-inner">
     <ul class="nav">
       <li class="brand">LeadGen</li>
-      <li><%= link_to "Potential Leads", questions_path%></li>
-      <li><%= link_to "My Leads", user_path(current_user)%> </li>
+      <li class="<%= 'active' if current_page? questions_path %>"><%= link_to "Potential Leads", questions_path%></li>
+
+      <li class="<%= 'active' if current_page? user_path(current_user) %>"><%= link_to "My Leads", user_path(current_user)%> </li>
 
     </ul>
     <ul class="nav pull-right">
-      <li><a>Account Balance: <%= number_to_currency(current_user.balance, :precision=>0)%></a></li>
-      <li class="active"><%= link_to "Add Money to Account", edit_user_path(current_user)%></li>
-      <li><a> Logged in as <%= current_user.email %></a></li>
+      <li><a class="non-link">Account Balance: <%= number_to_currency(current_user.balance, :precision=>0)%></a></li>
+      <li class="<%= 'active' if current_page? edit_user_path(current_user) %>"><%= link_to "Add Money to Account", edit_user_path(current_user)%></li>
+      <li><a class="non-link"> Logged in as <%= current_user.email %></a></li>
       <li>  <%= link_to "Logout", logout_path %></li>
     </ul>
   </div>
