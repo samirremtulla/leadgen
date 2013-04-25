@@ -8,6 +8,17 @@
 
 
 <%= render "/layouts/nav"%>
+
+  <% if flash[:notice] %>
+    <div class="alert alert-success">
+      <%= flash[:notice] %>
+    </div>
+  <% elsif flash[:alert] %>
+    <div class="alert alert-error">
+      <%= flash[:alert] %>
+    </div>
+  <% end %>
+  
 <div class="purchase_group">
   <h3>Purchase Question</h3>
   <p><strong>Question: </strong> <%= @question.description %> </p>

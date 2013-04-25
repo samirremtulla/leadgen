@@ -30,9 +30,8 @@
 }
 
 #phone_section {
-  height: 300px;
-  width: 40%;
-  border: 1px solid blue;
+  height: 225px;
+  width: 35%;
   float: right;
   margin-top:0;
 }

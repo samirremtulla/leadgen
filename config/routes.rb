@@ -1,6 +1,6 @@
 Leadgen::Application.routes.draw do
 
-# post "users/:id/send_message" => "users#send_message"
+  post "users/send_message" => "users#send_message"
   resources :users
 
 

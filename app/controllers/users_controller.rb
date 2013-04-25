@@ -36,17 +36,18 @@ class UsersController < ApplicationController
 
   def send_message
     # require 'twilio-ruby'
-    # accountsid = ENV["TWILIO_ACCOUNTS_ID"]
-    # authtoken = ENV["TWILIO_AUTH_TOKEN"]
+    accountsid = ENV["TWILIO_ACCOUNTS_ID"]
+    authtoken = ENV["TWILIO_AUTH_TOKEN"]
 
-    # #Text Messaging
-    # client = Twilio::REST::Client.new(accountsid, authtoken)
+    #Text Messaging
+    client = Twilio::REST::Client.new(accountsid, authtoken)
 
-    # client.account.sms.messages.create(
-    #   :from => '+12898125092',
-    #   :to => '+15196575606',
-    #   :body => 'Test'
-    # )
+    client.account.sms.messages.create(
+      :from => '+12898125092',
+      :to => params[:number],
+      :body => params[:message]
+    )
+    redirect_to questions_path, :notice => "Message Sent!"
 
     # Phone Call
     # @client = Twilio::REST::Client.new(accountsid, authtoken)

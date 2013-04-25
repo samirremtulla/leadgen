@@ -35,6 +35,8 @@ GEM
     better_errors (0.8.0)
       coderay (>= 1.0.0)
       erubis (>= 2.6.6)
+    binding_of_caller (0.7.1)
+      debug_inspector (>= 0.0.1)
     bootstrap-sass (2.3.1.0)
       sass (~> 3.2)
     builder (3.0.4)
@@ -47,6 +49,7 @@ GEM
       execjs
     coffee-script-source (1.6.2)
     commonjs (0.2.6)
+    debug_inspector (0.0.2)
     erubis (2.7.0)
     execjs (1.4.0)
       multi_json (~> 1.0)
@@ -164,6 +167,7 @@ PLATFORMS
 DEPENDENCIES
   acts-as-taggable-on
   better_errors
+  binding_of_caller
   bootstrap-sass
   coffee-rails (~> 3.2.1)
   figaro

@@ -1,7 +1,16 @@
-
-
 <%= render "/layouts/nav"%>
 <div class = "container">
+
+  <% if flash[:notice] %>
+    <div class="alert alert-success">
+      <%= flash[:notice] %>
+    </div>
+  <% elsif flash[:alert] %>
+    <div class="alert alert-error">
+      <%= flash[:alert] %>
+    </div>
+  <% end %>
+  
   <h1>My Leads</h1>
   <div class = "list_wrap">
     <% @user_questions.each do |q| %>
@@ -23,11 +32,11 @@
   <div id="phone_section">
     TEXT A NUMBER
     
-    <%= form_tag :method => :put do %>
+    <%= form_tag users_send_message_path, :method => :post do %>
       <%= label_tag "Phone Number (ex. +14155555555)"%>
       <%= text_field_tag :number %>
       <%= label_tag "Send Message"%>
-      <%= text_area_tag :number %>
+      <%= text_area_tag :message %>
       <br/>
       <%= submit_tag "Send", :class => "btn btn-success"%>
     <%end%>

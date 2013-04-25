@@ -1,5 +1,15 @@
 <%= render "/layouts/nav"%>
 <div class = "container">
+  <% if flash[:notice] %>
+    <div class="alert alert-success">
+      <%= flash[:notice] %>
+    </div>
+  <% elsif flash[:alert] %>
+    <div class="alert alert-error">
+      <%= flash[:alert] %>
+    </div>
+  <% end %>
+  
   <h1>Potential Leads</h1>
 
   <!-- http://railscasts.com/episodes/382-tagging?view=asciicast -->

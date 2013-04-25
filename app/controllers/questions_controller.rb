@@ -26,7 +26,7 @@ class QuestionsController < ApplicationController
     Pusher['site-activity'].trigger('action', data)
 
     if @question.save
-      redirect_to questions_path
+      redirect_to root_path, :notice => "Thank you for asking a question! Someone will get back to you shortly!"
     else
       render :new
     end
