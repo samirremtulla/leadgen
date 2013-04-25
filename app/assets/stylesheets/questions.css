@@ -11,28 +11,83 @@
   box-shadow: 0 0 5px 5px #888;
 }
 
+/*questions index*/
+.live_update{
+  border: 1px solid blue;
+  height: 100px;
+  float:right;
+  margin-top:10px;
+  width: 40%;
+}
 
-.list_bg, .list_bg2{
-  background-color:black;
-  width: 600px;
-  border: 1px solid white;
-  color:#ECF0F1;
+.list_wrap{
+  width: 50%;
+  float:left;
+}
+
+.list_bg{
+  background-color:white;
+  width: 95%;
+  border: 2px solid #7F8C8D;
+  color: #34495e;
   opacity: .9;
+  border-radius: 10px;
+  padding: 10px;
+  float:left;
+  position:relative;
+  margin-bottom:10px;
+  box-shadow: 0 0 2px 2px #888;
 }
 
-.list_bg2{
-  width:200px;
+.lead_button{
+  float:right;
+  width: 50%;
+  position:relative;
+  bottom:40px;
+  margin-bottom:-50px;
 }
 
+.lead_button button{
+  float:right;
+}
 
 #tag_cloud {
-  width: 400px;
-  line-height: 1.6em;
+  border: 1px solid blue;
+  height: 10%;
+  width: 40%;
+  float: right;
   .s { font-size: 0.8em; }
   .m { font-size: 1.2em; }
   .l { font-size: 1.8em; }
 }
 
+.tagsinput a{
+  color:black;
+}
+
+.pagination{
+  clear:both;
+}
+
+.pagination ul{
+  background:white;
+  opacity:.9;
+  box-shadow: 0 0 2px 2px #888;
+
+}
+
+.pagination ul > li.active > a{
+  background: #7F8C8D;
+}
+.pagination ul > li > a{
+  color: #34495e;
+}
+
+.pagination ul > li > a:hover{
+  color: #ECF0F1;
+  background: #7F8C8D;
+  border-color: #2C3E50;
+}
 /*http://graphicfusiondesign.com/blog/design/creating-fancy-css3-fade-in-animations-on-page-load/*/
 
 
