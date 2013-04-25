@@ -1,11 +1,16 @@
-<h3>Current Balance: <%=current_user.balance%>
-</h3>
+<%= render "/layouts/nav"%>
+<div class="container">
+  <div class="add-money">
+    <h3>Current Balance: <%=number_to_currency(current_user.balance, :precision =>0)%></h3>
 
-<%= form_tag user_path(@user), :method => :put do%>
-  <%= label_tag "Add Money"%>
-  <%= text_field_tag :amount_deposited %>
-  <%= submit_tag "Add Money!"%>
-<%end%>
+    <%= form_tag user_path(@user), :method => :put do%>
+      <%= label_tag "Input a Value:"%>
+      <%= number_field_tag :amount_deposited %>
+      <br/>
+      <%= submit_tag "Add Money!", :class => "btn btn-success"%>
+    <%end%>
+  </div>
+</div>
 
 
 

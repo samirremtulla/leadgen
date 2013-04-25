@@ -24,7 +24,7 @@ class UsersController < ApplicationController
     amount_deposited = params[:amount_deposited].to_i
     @user.balance += amount_deposited
     if @user.save
-      redirect_to root_path, :notice => "Thank you for adding money to your account!"
+      redirect_to questions_path, :notice => "Thank you for adding money to your account!"
     else
       render :edit
     end
