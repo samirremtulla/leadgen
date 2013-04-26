@@ -89,6 +89,7 @@ GEM
     mime-types (1.23)
     multi_json (1.7.2)
     multipart-post (1.2.0)
+    newrelic_rpm (3.6.1.87)
     oauth (0.4.7)
     oauth2 (0.8.1)
       faraday (~> 0.8)
@@ -177,6 +178,7 @@ DEPENDENCIES
   kaminari
   kaminari-bootstrap
   less-rails
+  newrelic_rpm (~> 3.6.1.87)
   pg
   pusher_rails
   rails (= 3.2.13)

@@ -17,7 +17,8 @@ gem 'acts-as-taggable-on'
 gem 'sass-rails',   '~> 3.2.3'
 gem 'twilio-ruby'
 gem "figaro"
-gem "binding_of_caller" 
+gem "binding_of_caller"
+gem "newrelic_rpm", "~> 3.6.1.87"
 
 group :development do
   gem "better_errors"
