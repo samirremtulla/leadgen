@@ -85,7 +85,6 @@
 }
 
 #tag_cloud {
-  height: 10%;
   width: 40%;
   float: right;
   .s { font-size: 0.8em; }
