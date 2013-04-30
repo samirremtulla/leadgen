@@ -33,7 +33,28 @@
           Unavailable
         <%end%>
       </p>
+        <% @purchased = false%>
+        <% if current_user.questions == nil %>
           <div class="lead_button"><button class="btn btn-success"><%= link_to "Purchase Lead!", question_path(question)%></button></div>
+        <%else%>
+          <%current_user.questions.each do |user_question|%>
+            <% if user_question.id == question.id%>
+                <%@purchased = true%>              
+            <%end%>
+          <%end%>
+
+          <% if @purchased == true%>
+            <div class="lead_button"><button class="btn btn-danger"><%= link_to "Already Purchased!", question_path(question)%></button></div>
+          <% else %>
+            <div class="lead_button"><button class="btn btn-success"><%= link_to "Purchase Lead!", question_path(question)%></button></div>
+
+          <%end%>
+        <%end%>
+    
+
+
+
+
     </div>
     <br/>
   <%end%>
