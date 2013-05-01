@@ -89,6 +89,7 @@
 .tagsinput{
   background: white;
   opacity:.9;
+  height: auto;
   box-shadow: 0 0 2px 2px #888;
   border: 2px solid #7F8C8D;
 }
