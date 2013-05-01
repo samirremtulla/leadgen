@@ -2,7 +2,10 @@
 <html>
 <head>
   <title>Leadgen</title>
-  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <script type="text/javascript" src="https://js.stripe.com/v2/">
+    Stripe.setPublishableKey(ENV["STRIPE_PUBLIC_KEY"]);
+  </script>
+  <%= stylesheet_link_tag "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   
   <%= csrf_meta_tags %>

@@ -19,6 +19,7 @@ gem 'twilio-ruby'
 gem "figaro"
 gem "binding_of_caller"
 gem "newrelic_rpm", "~> 3.6.1.87"
+gem "stripe"
 
 group :development do
   gem "better_errors"
