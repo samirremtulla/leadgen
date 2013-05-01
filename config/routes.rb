@@ -2,7 +2,8 @@ Leadgen::Application.routes.draw do
 
   post "users/send_message" => "users#send_message"
   resources :users
-
+  resources :charges
+  
 
   root :to => 'questions#new'
   get "logout" => "sessions#destroy", :as => "logout"

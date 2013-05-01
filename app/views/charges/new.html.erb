@@ -1,0 +1,18 @@
+<%= render "/layouts/nav"%>
+<div class="container">
+  <div class="add-money">
+    <h3>Current Balance: <%=number_to_currency(current_user.balance, :precision =>0)%></h3>
+    <h3>Add $10 to Your Balance </h3>
+
+<%= form_tag charges_path, :method => :post do %>
+
+  <script src="https://checkout.stripe.com/v2/checkout.js" class="stripe-button"
+          data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
+          data-description="Add Money to Account"
+          data-amount="10000"></script>
+  <% end %>
+
+  </div>
+</div>
+
+<!-- https://stripe.com/docs/checkout/guides/rails -->
