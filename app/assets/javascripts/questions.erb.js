@@ -9,5 +9,5 @@ var channel = pusher.subscribe('test_channel');
 console.log(channel)
 channel.bind('action', function(data) {
   console.log("action received!");
-  $('.live_update').prepend("<div class='message'><a href=" + data.id + ">" + data.description + "</a></div>");
+  $('.live_update').prepend("<div class='message'><a href= '/questions/" + data.id + "'>" + data.description + "</a></div>");
 });
