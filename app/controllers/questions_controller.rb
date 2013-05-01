@@ -22,11 +22,11 @@ class QuestionsController < ApplicationController
     @question = Question.new (params[:question])
     @question.response = 0 #patch fix later
     @question.city = request.location.city
-    data = @question.description
+    data = @question
     # Pusher['site-activity'].trigger('action', data)
-    Pusher['test_channel'].trigger('action', data)
 
     if @question.save
+      Pusher['test_channel'].trigger('action', data)
       redirect_to root_path, :notice => "Thank you for asking a question! Someone will get back to you shortly!"
     else
       render :new

@@ -12,12 +12,14 @@
 }
 
 /*questions index*/
-.live_update{
-  border: 1px solid blue;
-  height: 100px;
+.message{
   float:right;
   margin-top:10px;
   width: 40%;
+  background: red;
+  opacity:.9;
+  box-shadow: 0 0 2px 2px #888;
+  border: 2px solid #7F8C8D;
 }
 
 .list_wrap{
