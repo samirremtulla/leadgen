@@ -108,6 +108,11 @@
 
 .tagsinput .tag{
   background: #95A5A6;
+  color: #34495e;
+}
+
+.tag_overview a {
+  color: #34495e;
 }
 
 /*http://graphicfusiondesign.com/blog/design/creating-fancy-css3-fade-in-animations-on-page-load/*/

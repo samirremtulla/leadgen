@@ -18,7 +18,7 @@
   <% @questions.each do |question|%>
     <div class="list_bg">
       <p>Question: <%= question.description%></p>
-      <p>Tags: <%= raw question.tag_list.map { |t| link_to t, tag_path(t)}.join(', ')%></p>
+      <p class ="tag_overview">Tags: <%= raw question.tag_list.map { |t| link_to t, tag_path(t)}.join(', ')%></p>
       <p>City: <%= question.city%></p>
       <p>Phone: 
         <% if question.phone? %>
