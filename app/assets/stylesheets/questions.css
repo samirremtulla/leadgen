@@ -15,11 +15,18 @@
 .message{
   float:right;
   margin-top:10px;
-  width: 40%;
-  background: red;
+  width: 38%;
+  background: white;
   opacity:.9;
   box-shadow: 0 0 2px 2px #888;
   border: 2px solid #7F8C8D;
+  border-radius:10px;
+  color: #34495e;
+  padding: 8px;
+}
+
+.message a {
+  color: #34495e;
 }
 
 .list_wrap{
